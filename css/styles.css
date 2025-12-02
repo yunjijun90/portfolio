@@ -1,1 +1,606 @@
-# Main stylesheet
+/* ========================================
+   RESET & BASE STYLES
+   ======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ========================================
+   CONTAINER & GRID SYSTEM
+   ======================================== */
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Fluid Grid - Scales with viewport */
+.container--fluid {
+  padding-left: var(--grid-desktop-fluid-margin);
+  padding-right: var(--grid-desktop-fluid-margin);
+}
+
+/* Fixed Grid - Stops at max width */
+.container--fixed {
+  max-width: var(--grid-desktop-fixed-max-width);
+  padding-left: var(--grid-desktop-fluid-margin);
+  padding-right: var(--grid-desktop-fluid-margin);
+}
+
+/* ========================================
+   NAVIGATION
+   ======================================== */
+
+.navigation {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--color-dynamic-pink);
+  padding: var(--spacing-10) var(--spacing-40);
+  transition: background-color 0.3s ease;
+}
+
+/* Logo Component */
+.logo {
+    display: inline-block;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+  
+  .logo:hover {
+    opacity: 0.8;
+  }
+  
+  .logo img {
+    display: block;
+  height: 32px;
+  width: auto;
+}
+
+/* ========================================
+   MAIN CONTENT
+   ======================================== */
+
+.main-content {
+  flex: 1;
+}
+
+/* ========================================
+   INTRODUCTION CONTAINER COMPONENT (From Figma)
+   ======================================== */
+
+/* Selected Work Introduction - Light Variant */
+.introduction-container {
+  background-color: var(--color-background-white);
+  padding: var(--spacing-24) var(--spacing-40);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-16);
+}
+
+.introduction-container.variant-selected {
+  background-color: var(--color-background-white);
+  color: var(--color-on-fill-black);
+}
+
+.introduction-container.variant-personal {
+  background-color: var(--color-background-main);
+  color: var(--color-on-fill-white);
+}
+
+.intro-text {
+  font-family: var(--font-headline);
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-h1);
+  line-height: var(--line-height-h1);
+  letter-spacing: var(--letter-spacing-h1);
+  max-width: 800px;
+}
+
+.introduction-container.variant-selected .intro-text {
+  color: var(--color-on-fill-black);
+}
+
+.introduction-container.variant-personal .intro-text {
+  color: var(--color-on-fill-white);
+  max-width: none;
+  text-wrap: balance;
+}
+
+.intro-link {
+  font-family: var(--font-body);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-h2);
+  line-height: var(--line-height-h2);
+  letter-spacing: var(--letter-spacing-h2);
+  text-decoration: none;
+}
+
+.introduction-container.variant-selected .intro-link {
+  color: var(--color-on-fill-black);
+}
+
+.introduction-container.variant-personal .intro-link {
+  color: var(--color-on-fill-white);
+}
+
+/* LinkedIn link anchor */
+.intro-link-anchor {
+  color: inherit;
+  text-decoration: none;
+}
+
+.intro-link-anchor:hover {
+  text-decoration: underline;
+}
+
+/* ========================================
+   WORK SECTIONS
+   ======================================== */
+
+.work-section {
+  border-bottom: 0.5px solid var(--color-on-fill-black);
+}
+
+.work-section:last-child {
+  border-bottom: none;
+}
+
+/* Personal Work Section - Dark Background */
+#personalWorkSection {
+  background-color: var(--color-background-main);
+  border-bottom: none;
+}
+
+/* Work Grid - Single Column Layout */
+.work-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0; /* No gap - borders create separation */
+}
+
+/* ========================================
+   THUMBNAIL CONTAINER COMPONENT (Horizontal Layout)
+   ======================================== */
+
+.thumbnail-container {
+  width: 100%;
+  background-color: var(--color-background-white);
+  border-top: 0.5px solid var(--color-on-fill-black);
+  padding: var(--spacing-16) var(--spacing-40);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Hover state from Figma - Light variant (NO TRANSFORM/JUMP) */
+.thumbnail-container:hover {
+  background-color: var(--color-background-pink);
+}
+
+/* Selected state - Light variant */
+.thumbnail-container.selected {
+  background-color: var(--color-background-pink);
+}
+
+/* Dark Variant - For Personal Work */
+#personalWorkSection .thumbnail-container {
+  background: var(--color-background-main);
+  border-top: 0.5px solid rgba(255, 255, 255, 0.2);
+}
+
+#personalWorkSection .thumbnail-container:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#personalWorkSection .thumbnail-container.selected {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Left Side - Text Content */
+.thumbnail-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  flex: 1;
+}
+
+.thumbnail-title {
+  color: var(--color-on-fill-black);
+  font-family: var(--font-body);
+  font-size: var(--font-size-t1);
+  font-weight: var(--font-weight-t1);
+  line-height: var(--line-height-t1);
+  letter-spacing: var(--letter-spacing-t1);
+}
+
+.thumbnail-subtitle {
+  color: var(--color-on-fill-neutral);
+  font-family: var(--font-body);
+  font-size: var(--font-size-s1);
+  font-weight: var(--font-weight-s1);
+  line-height: var(--line-height-s1);
+  letter-spacing: var(--letter-spacing-s1);
+}
+
+.thumbnail-year {
+  color: var(--color-on-fill-neutral);
+  font-family: var(--font-body);
+  font-size: var(--font-size-s1);
+  font-weight: var(--font-weight-s1);
+  line-height: var(--line-height-s1);
+  letter-spacing: var(--letter-spacing-s1);
+}
+
+/* Dark Variant Text Colors - For Personal Work */
+#personalWorkSection .thumbnail-title {
+  color: var(--color-on-fill-white);
+}
+
+#personalWorkSection .thumbnail-subtitle,
+#personalWorkSection .thumbnail-year {
+  color: var(--color-on-fill-neutral);
+}
+
+/* Right Side - Thumbnail Images */
+.thumbnail-images {
+  display: flex;
+  gap: var(--spacing-12);
+  align-items: center;
+}
+
+.thumbnail-image {
+  width: 150px;
+  height: 97px;
+  object-fit: cover;
+  background-color: var(--color-on-fill-neutral-low);
+}
+
+/* Dark Variant Image Background - For Personal Work */
+#personalWorkSection .thumbnail-image {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Lock Icon for Password Protected */
+.thumbnail-lock {
+  position: absolute;
+  top: var(--spacing-12);
+  right: var(--spacing-12);
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-overlay-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-on-fill-black);
+  font-size: 10px;
+}
+
+/* ========================================
+   BUTTON COMPONENT (From Figma)
+   ======================================== */
+
+/* Button Base Styles */
+.button {
+  border-radius: 4px;
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: var(--font-body);
+}
+
+/* Primary Button Variant */
+.button--primary {
+  background-color: var(--color-on-fill-black);
+  color: var(--color-on-fill-white);
+  padding: 0 24px;
+  height: 36px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.45;
+  border: none;
+  width: 240px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button--primary:hover {
+  background-color: var(--color-on-fill-neutral-mid);
+}
+
+.button--primary:active,
+.button--primary.selected {
+  background-color: var(--color-on-fill-black);
+}
+
+/* Text Button Variant */
+.button--text {
+  background: transparent;
+  color: var(--color-on-fill-black);
+  padding: 0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.45;
+  letter-spacing: -0.06px;
+  border: none;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.button--text:hover {
+  color: var(--color-on-fill-neutral-mid);
+  text-decoration: underline;
+}
+
+.button--text:active,
+.button--text.selected {
+  color: var(--color-on-fill-black);
+  text-decoration: underline;
+}
+
+/* ========================================
+   WORK DETAIL CONTAINER COMPONENTS (From Figma)
+   ======================================== */
+
+.work-detail-container {
+  background-color: var(--color-background-main);
+  padding: var(--spacing-24) var(--spacing-40);
+  width: 100%;
+}
+
+/* Header Variant - Title and Subtitle */
+.work-detail-container--header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-16);
+}
+
+.work-detail-container--header .detail-title {
+  font-family: var(--font-headline);
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-h1);
+  line-height: var(--line-height-h1);
+  color: var(--color-on-fill-white);
+  max-width: 800px;
+}
+
+.work-detail-container--header .detail-subtitle {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  font-family: var(--font-body);
+  font-size: var(--font-size-s1);
+  font-weight: var(--font-weight-s1);
+  line-height: var(--line-height-s1);
+  letter-spacing: var(--letter-spacing-s1);
+  color: var(--color-on-fill-neutral);
+}
+
+/* Introduction Variant - Multi-column layout */
+.work-detail-container--introduction {
+  display: flex;
+  gap: var(--spacing-16);
+}
+
+.introduction-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+}
+
+.introduction-column--narrow {
+  flex: 0 0 290px;
+}
+
+.introduction-column--narrowest {
+  flex: 0 0 119px;
+}
+
+.introduction-column h3 {
+  font-family: var(--font-body);
+  font-size: var(--font-size-t2);
+  font-weight: var(--font-weight-t2);
+  line-height: var(--line-height-t2);
+  letter-spacing: var(--letter-spacing-t2);
+  color: var(--color-on-fill-white);
+  margin: 0;
+}
+
+.introduction-column h4 {
+  font-family: var(--font-body);
+  font-size: var(--font-size-t3);
+  font-weight: var(--font-weight-t3);
+  line-height: var(--line-height-t3);
+  color: var(--color-on-fill-white);
+  margin: 0;
+}
+
+.introduction-column p {
+  font-family: var(--font-body);
+  font-size: var(--font-size-b1);
+  font-weight: var(--font-weight-b1);
+  line-height: var(--line-height-b1);
+  color: var(--color-on-fill-white);
+  margin: 0;
+}
+
+.introduction-column .meta-text {
+  font-size: var(--font-size-s1);
+  font-weight: var(--font-weight-s1);
+  line-height: var(--line-height-s1);
+  letter-spacing: var(--letter-spacing-s1);
+  color: var(--color-on-fill-neutral);
+}
+
+/* Body Variant - Text + Image */
+.work-detail-container--body {
+  display: flex;
+  gap: var(--spacing-16);
+}
+
+.body-text-section {
+  flex: 0 0 443px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-24);
+}
+
+.body-text-block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+}
+
+.body-text-block h3 {
+  font-family: var(--font-body);
+  font-size: var(--font-size-t2);
+  font-weight: var(--font-weight-t2);
+  line-height: var(--line-height-t2);
+  letter-spacing: var(--letter-spacing-t2);
+  color: var(--color-on-fill-white);
+  margin: 0;
+}
+
+.body-text-block h4 {
+  font-family: var(--font-body);
+  font-size: var(--font-size-t3);
+  font-weight: var(--font-weight-t3);
+  line-height: var(--line-height-t3);
+  color: var(--color-on-fill-white);
+  margin: 0;
+}
+
+.body-text-block p {
+  font-family: var(--font-body);
+  font-size: var(--font-size-b1);
+  font-weight: var(--font-weight-b1);
+  line-height: var(--line-height-b1);
+  color: var(--color-on-fill-white);
+  margin: 0;
+}
+
+.body-text-block .meta-text {
+  font-size: var(--font-size-s1);
+  font-weight: var(--font-weight-s1);
+  line-height: var(--line-height-s1);
+  letter-spacing: var(--letter-spacing-s1);
+  color: var(--color-on-fill-neutral);
+}
+
+.body-image-section {
+  flex: 1;
+}
+
+/* Images Variant - Three column grid */
+.work-detail-container--images {
+  display: flex;
+  gap: var(--spacing-16);
+}
+
+.image-slot {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.image-slot img {
+  width: 100%;
+  height: auto;
+  display: block;
+  background-color: var(--color-on-fill-neutral-low);
+}
+
+.image-slot .image-caption {
+  font-family: var(--font-body);
+  font-size: var(--font-size-s1);
+  font-weight: var(--font-weight-s1);
+  line-height: var(--line-height-s1);
+  letter-spacing: var(--letter-spacing-s1);
+  color: var(--color-on-fill-neutral);
+}
+
+/* Next Variant - Next project link */
+.work-detail-container--next {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: var(--spacing-16);
+  padding-top: var(--spacing-24);
+  padding-bottom: var(--spacing-40);
+}
+
+.next-link {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-16);
+  text-decoration: none;
+  color: var(--color-on-fill-white);
+  transition: opacity 0.2s ease;
+}
+
+.next-link:hover {
+  opacity: 0.7;
+}
+
+.next-link .next-title {
+  font-family: var(--font-headline);
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-h1);
+  line-height: var(--line-height-h1);
+  max-width: 390px;
+}
+
+.next-link .arrow-icon {
+  width: 119px;
+  height: 51px;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+.footer {
+  background-color: var(--color-background-main);
+  padding: var(--spacing-10) var(--spacing-40);
+  border-top: 0.5px solid var(--color-on-fill-white);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-copyright {
+  font-family: var(--font-body);
+  font-size: var(--font-size-s1);
+  color: var(--color-on-fill-neutral);
+  }

@@ -1,0 +1,168 @@
+{
+  "site": {
+    "title": "Yunji Jun",
+    "description": "Product Designer Portfolio"
+  },
+  "selectedWork": {
+    "sectionTitle": "Selected Work",
+    "requiresPassword": true,
+    "password": "1788",
+    "projects": [
+      {
+        "id": "project-1",
+        "title": "Project Title 1",
+        "subtitle": "Subtitle / Category",
+        "year": "2024",
+        "thumbnail": "images/selectedWork/project-1-thumbnail.jpg",
+        "thumbnails": [
+          "images/selectedWork/project-1-thumb-1.jpg",
+          "images/selectedWork/project-1-thumb-2.jpg"
+        ],
+        "thumbnailAlt": "Project 1 thumbnail",
+        "detailPage": "pages/workDetail.html?project=project-1"
+      },
+      {
+        "id": "project-2",
+        "title": "Project Title 2",
+        "subtitle": "Subtitle / Category",
+        "year": "2024",
+        "thumbnail": "images/selectedWork/project-2-thumbnail.jpg",
+        "thumbnailAlt": "Project 2 thumbnail",
+        "detailPage": "pages/workDetail.html?project=project-2"
+      },
+      {
+        "id": "project-3",
+        "title": "Project Title 3",
+        "subtitle": "Subtitle / Category",
+        "year": "2023",
+        "thumbnail": "images/selectedWork/project-3-thumbnail.jpg",
+        "thumbnailAlt": "Project 3 thumbnail",
+        "detailPage": "pages/workDetail.html?project=project-3"
+      }
+    ]
+  },
+  "personalWork": {
+    "sectionTitle": "Personal Work",
+    "requiresPassword": false,
+    "projects": [
+      {
+        "id": "personal-1",
+        "title": "Personal Project Title 1",
+        "subtitle": "Category / Type",
+        "year": "2024",
+        "thumbnail": "images/personalWork/personal-1-thumbnail.jpg",
+        "thumbnailAlt": "Personal project 1 thumbnail",
+        "detailPage": "pages/workDetail.html?project=personal-1"
+      },
+      {
+        "id": "personal-2",
+        "title": "Personal Project Title 2",
+        "subtitle": "Category / Type",
+        "year": "2024",
+        "thumbnail": "images/personalWork/personal-2-thumbnail.jpg",
+        "thumbnailAlt": "Personal project 2 thumbnail",
+        "detailPage": "pages/workDetail.html?project=personal-2"
+      },
+      {
+        "id": "personal-3",
+        "title": "Personal Project Title 3",
+        "subtitle": "Category / Type",
+        "year": "2023",
+        "thumbnail": "images/personalWork/personal-3-thumbnail.jpg",
+        "thumbnailAlt": "Personal project 3 thumbnail",
+        "detailPage": "pages/workDetail.html?project=personal-3"
+      }
+    ]
+  },
+  "projectDetails": {
+    "project-1": {
+      "title": "Project Title 1",
+      "subtitle": "Subtitle / Category",
+      "year": "2024",
+      "introduction": {
+        "role": "Lead Product Designer",
+        "timeline": "6 months",
+        "team": "2 designers, 3 engineers",
+        "description": "Brief introduction paragraph describing the project scope, goals, and your role. This should be concise and engaging to hook the reader."
+      },
+      "body": [
+        {
+          "type": "text",
+          "content": "## Problem Statement\n\nDescribe the problem you were solving. What challenges did the team face? What user needs were you addressing?"
+        },
+        {
+          "type": "text",
+          "content": "## Process\n\nExplain your design process, methodology, and approach to solving the problem."
+        },
+        {
+          "type": "text",
+          "content": "## Solution\n\nDescribe the final solution and key design decisions you made."
+        }
+      ],
+      "images": [
+        {
+          "src": "images/selectedWork/project-1-img-1.jpg",
+          "alt": "Project 1 image 1 description",
+          "caption": "Optional caption for this image"
+        },
+        {
+          "src": "images/selectedWork/project-1-img-2.jpg",
+          "alt": "Project 1 image 2 description",
+          "caption": "Optional caption for this image"
+        }
+      ],
+      "nextProject": {
+        "id": "project-2",
+        "title": "Next Project Title",
+        "thumbnail": "images/selectedWork/project-2-thumbnail.jpg"
+      }
+    },
+    "project-2": {
+      "title": "Project Title 2",
+      "subtitle": "Subtitle / Category",
+      "year": "2024",
+      "introduction": {
+        "role": "Product Designer",
+        "timeline": "4 months",
+        "team": "1 designer, 2 engineers",
+        "description": "Brief introduction for project 2."
+      },
+      "body": [
+        {
+          "type": "text",
+          "content": "Project 2 content goes here..."
+        }
+      ],
+      "images": [],
+      "nextProject": {
+        "id": "project-3",
+        "title": "Next Project Title",
+        "thumbnail": "images/selectedWork/project-3-thumbnail.jpg"
+      }
+    },
+    "personal-1": {
+      "title": "Personal Project Title 1",
+      "subtitle": "Category / Type",
+      "year": "2024",
+      "introduction": {
+        "role": "Solo Project",
+        "timeline": "2 months",
+        "team": "Individual work",
+        "description": "Brief introduction for personal project 1."
+      },
+      "body": [
+        {
+          "type": "text",
+          "content": "Personal project 1 content goes here..."
+        }
+      ],
+      "images": [],
+      "nextProject": {
+        "id": "personal-2",
+        "title": "Next Personal Project",
+        "thumbnail": "images/personalWork/personal-2-thumbnail.jpg"
+      }
+    }
+  }
+}
+

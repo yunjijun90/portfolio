@@ -1,1 +1,254 @@
-# Design tokens from Figma
+/* ========================================
+   CUSTOM FONT IMPORTS
+   ======================================== */
+
+/* STK Earl - Purchased Web Font */
+@font-face {
+  font-family: 'STK Earl';
+  src: url('../fonts/headline/STKEarl-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Inter - Google Font (using CDN) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+
+:root {
+    /* ========================================
+       COLOR VARIABLES - Dark Mode
+       ======================================== */
+    
+    /* Background Colors - Dark */
+    --color-background-main: #121212;
+    --color-background-black: #000000;
+    --color-background-main-low: #2A2A2A;
+    
+    /* ========================================
+       COLOR VARIABLES - Light Mode
+       ======================================== */
+    
+    /* Background Colors - Light */
+    --color-background-white: #FFFFFF;
+    --color-background-pink: #F4E7FF;
+    
+    /* ========================================
+       COLOR VARIABLES - On Fill (Text/Icons)
+       ======================================== */
+    
+    --color-on-fill-black: #000000;
+    --color-on-fill-neutral-mid: #474747;
+    --color-on-fill-neutral: #8F8F8F;
+    --color-on-fill-neutral-low: #E0E0E0;
+    --color-on-fill-white: #FFFFFF;
+    
+    /* ========================================
+       COLOR VARIABLES - Dynamic (Accent Colors)
+       ======================================== */
+    
+    --color-dynamic-pink: #E4C3FF;
+    --color-dynamic-skyblue: #C3FDFF;
+    --color-dynamic-blue: #49AAFF;
+    --color-dynamic-salmon: #FF9292;
+    
+    /* ========================================
+       COLOR VARIABLES - Overlay
+       ======================================== */
+    
+    --color-overlay-dark: rgba(0, 0, 0, 0.7);
+    --color-overlay-light: rgba(255, 255, 255, 0.2);
+    
+    /* ========================================
+       SPACING VARIABLES
+       ======================================== */
+    
+    --spacing-60: 60px;
+    --spacing-48: 48px;
+    --spacing-40: 40px;
+    --spacing-32: 32px;
+    --spacing-24: 24px;
+    --spacing-20: 20px;
+    --spacing-16: 16px;
+    --spacing-12: 12px;
+    --spacing-10: 10px;
+    --spacing-8: 8px;
+    --spacing-4: 4px;
+    --spacing-2: 2px;
+    
+    /* ========================================
+       TYPOGRAPHY VARIABLES
+       ======================================== */
+    
+    /* Font Families */
+    --font-headline: 'STK Earl', serif;  /* Your purchased web font */
+    --font-body: 'Inter', sans-serif;     /* Free Google Font */
+    
+    /* Headline Styles - STK Earl */
+    --font-size-h1: 24px;
+    --font-weight-h1: 300;  /* Light */
+    --line-height-h1: 145%;
+    --letter-spacing-h1: 0%;
+    
+    --font-size-h2: 16px;
+    --font-weight-h2: 400;  /* Regular */
+    --line-height-h2: 145%;
+    --letter-spacing-h2: -0.5%;
+    
+    /* Title Styles - Inter */
+    --font-size-t1: 20px;
+    --font-weight-t1: 400;  /* Regular */
+    --line-height-t1: 145%;
+    --letter-spacing-t1: -0.5%;
+    
+    --font-size-t2: 16px;
+    --font-weight-t2: 500;  /* Medium */
+    --line-height-t2: 145%;
+    --letter-spacing-t2: -0.5%;
+    
+    --font-size-t3: 14px;
+    --font-weight-t3: 500;  /* Medium */
+    --line-height-t3: 145%;
+    --letter-spacing-t3: 0%;
+    
+    /* Subtitle Style - Inter */
+    --font-size-s1: 12px;
+    --font-weight-s1: 400;  /* Regular */
+    --line-height-s1: 145%;
+    --letter-spacing-s1: -0.5%;
+    
+    /* Body Style - Inter */
+    --font-size-b1: 14px;
+    --font-weight-b1: 400;  /* Regular */
+    --line-height-b1: 145%;
+    --letter-spacing-b1: 0%;
+    
+    /* ========================================
+       LAYOUT GRID SYSTEM
+       ======================================== */
+    
+    /* Desktop Fluid Grid */
+    --grid-desktop-fluid-columns: 9;
+    --grid-desktop-fluid-gutter: 16px;
+    --grid-desktop-fluid-margin: 40px;
+    --grid-desktop-fluid-type: stretch;
+    
+    /* Desktop Fixed Grid */
+    --grid-desktop-fixed-columns: 9;
+    --grid-desktop-fixed-width: 119px;
+    --grid-desktop-fixed-gutter: 16px;
+    --grid-desktop-fixed-type: center;
+    --grid-desktop-fixed-max-width: 1440px;
+    
+    /* Tablet Fluid Grid */
+    --grid-tablet-fluid-columns: 4;
+    --grid-tablet-fluid-gutter: 8px;
+    --grid-tablet-fluid-margin: 20px;
+    --grid-tablet-fluid-type: stretch;
+    
+    /* Tablet Fixed Grid */
+    --grid-tablet-fixed-columns: 4;
+    --grid-tablet-fixed-width: 168px;
+    --grid-tablet-fixed-gutter: 8px;
+    --grid-tablet-fixed-type: center;
+    
+    /* Mobile Fluid Grid */
+    --grid-mobile-fluid-columns: 4;
+    --grid-mobile-fluid-gutter: 8px;
+    --grid-mobile-fluid-margin: 20px;
+    --grid-mobile-fluid-type: stretch;
+    
+    /* Mobile Fixed Grid */
+    --grid-mobile-fixed-columns: 4;
+    --grid-mobile-fixed-width: 78px;
+    --grid-mobile-fixed-gutter: 8px;
+    --grid-mobile-fixed-type: center;
+  }
+  
+/* ========================================
+   LIGHT MODE (Default - matches Figma)
+   ======================================== */
+
+body {
+  background-color: var(--color-background-white);
+  color: var(--color-on-fill-black);
+  font-family: var(--font-body);
+  font-size: var(--font-size-b1);
+  font-weight: var(--font-weight-b1);
+  line-height: var(--line-height-b1);
+  letter-spacing: var(--letter-spacing-b1);
+}
+
+/* ========================================
+   DARK MODE (Optional - add class to body)
+   ======================================== */
+
+body.dark-mode {
+  background-color: var(--color-background-main);
+  color: var(--color-on-fill-white);
+}
+  
+  /* ========================================
+     TYPOGRAPHY CLASSES
+     ======================================== */
+  
+  /* Headline Styles */
+  .headline-h1 {
+    font-family: var(--font-headline);
+    font-size: var(--font-size-h1);
+    font-weight: var(--font-weight-h1);
+    line-height: var(--line-height-h1);
+    letter-spacing: var(--letter-spacing-h1);
+  }
+  
+  .headline-h2 {
+    font-family: var(--font-headline);
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-h2);
+    line-height: var(--line-height-h2);
+    letter-spacing: var(--letter-spacing-h2);
+  }
+  
+  /* Title Styles */
+  .title-t1 {
+    font-family: var(--font-body);
+    font-size: var(--font-size-t1);
+    font-weight: var(--font-weight-t1);
+    line-height: var(--line-height-t1);
+    letter-spacing: var(--letter-spacing-t1);
+  }
+  
+  .title-t2 {
+    font-family: var(--font-body);
+    font-size: var(--font-size-t2);
+    font-weight: var(--font-weight-t2);
+    line-height: var(--line-height-t2);
+    letter-spacing: var(--letter-spacing-t2);
+  }
+  
+  .title-t3 {
+    font-family: var(--font-body);
+    font-size: var(--font-size-t3);
+    font-weight: var(--font-weight-t3);
+    line-height: var(--line-height-t3);
+    letter-spacing: var(--letter-spacing-t3);
+  }
+  
+  /* Subtitle Style */
+  .subtitle-s1 {
+    font-family: var(--font-body);
+    font-size: var(--font-size-s1);
+    font-weight: var(--font-weight-s1);
+    line-height: var(--line-height-s1);
+    letter-spacing: var(--letter-spacing-s1);
+  }
+  
+  /* Body Style */
+  .body-b1 {
+    font-family: var(--font-body);
+    font-size: var(--font-size-b1);
+    font-weight: var(--font-weight-b1);
+    line-height: var(--line-height-b1);
+    letter-spacing: var(--letter-spacing-b1);
+  }
+
+  
