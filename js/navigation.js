@@ -21,20 +21,20 @@ function getNextColorIndex() {
 }
 
 // Initialize logos (always use 'general' variant)
-function initializeLogos() {
-  const isMobile = window.innerWidth <= 800;
-  const device = isMobile ? 'mobile' : 'desktop';
+// function initializeLogos() {
+//   const isMobile = window.innerWidth <= 800;
+//   const device = isMobile ? 'mobile' : 'desktop';
   
-  const navLogoImg = document.getElementById('navLogoImg');
-  if (navLogoImg) {
-    navLogoImg.src = `images/assets/logo-general-light-${device}.svg`;
-  }
+//   const navLogoImg = document.getElementById('navLogoImg');
+//   if (navLogoImg) {
+//     navLogoImg.src = `images/assets/logo-general-light-${device}.svg`;
+//   }
   
-  const footerLogoImg = document.getElementById('footerLogoImg');
-  if (footerLogoImg) {
-    footerLogoImg.src = `images/assets/logo-general-dark-${device}.svg`;
-  }
-}
+//   const footerLogoImg = document.getElementById('footerLogoImg');
+//   if (footerLogoImg) {
+//     footerLogoImg.src = `../images/assets/logo-general-dark-${device}.svg`;
+//   }
+// }
 
 // Initialize background color
 function initializeBackgroundColor() {
