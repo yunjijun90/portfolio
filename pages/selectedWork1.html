@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keystone Platform Libraries - Yunji Jun</title>
+  
+  <!-- Link CSS files -->
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navigation">
+    <a href="../index.html" class="logo">
+      <img src="../images/assets/logo-general-light-desktop.svg" alt="Yunji Jun" id="navLogoImg">
+    </a>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    
+    <!-- Header Container -->
+    <div class="work-detail-container work-detail-container--header">
+      <div class="detail-title">
+        Keystone Platform Libraries
+      </div>
+      <div class="detail-subtitle">
+        <div>Composite Library</div>
+        <div>Design System</div>
+      </div>
+    </div>
+
+    <!-- Introduction Container -->
+    <div class="work-detail-container work-detail-container--introduction">
+      <div class="introduction-header">
+        <div class="introduction-column">
+          <h3>Challenges</h3>
+          <p>Keystone was newly developed, and while the atomic core layer was established first, a significant gap emerged between the new core library and the existing legacy system.</p>
+
+          <ol>
+            <li>Legacy-to-core disconnect</li>
+            <li>Pattern inconsistency</li>
+            <li>Migration bottleneck</li>
+          </ol>
+        </div>
+      </div>
+      <div class="introduction-column introduction-column--narrow">
+        <h4>My role</h4>
+        <p class="meta-text">Led the full ecosystem for TikTok Ads Manager Library, and TikTok One Library.</p>
+        <ul>
+          <li>Component strategy & roadmap</li>
+          <li>Cross-functional collaboration (designers and engineers)</li>
+          <li>Creation, maintenance, documentation, and governance</li>
+          <li>Migration support & deprecation system</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Body Container 1: How to solve? -->
+    <div class="work-detail-container work-detail-container--body">
+      <div class="body-text-section">
+        <div class="body-text-block">
+          <h3>How to solve?</h3>
+          <h3>→ Introducing a tier structure helps the management of the core and composite libraries</h3>
+          <p>Core Library (Tier 1) is a high-quality, centrally governed set of atomic and foundational components used across all platforms. Platform Libraries (Tier 2) is composite components built from core primitives, tailored for the unique needs of each product platform.</p>
+        </div>
+        <div class="body-text-block">
+          <h4>Why tiers are divided by platforms, not features?</h4>
+          <p class="meta-text">Each TikTok monetization product has distinct workflows and business logic.</p>
+          <ul class="meta-text">
+            <li>TikTok Ads Manager (TTAM): Heavy use of forms for campaign creation, tables, and analytical displays.</li>
+            <li>TikTok One: Search, discovery, and lists of creators and partners for collaboration workflows.</li>
+            <li>Platform libraries allow product-specific structures while sharing the same foundational behavior, tokens, and interaction patterns.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="body-image-section">
+        <div class="image-slot">
+          <img src="../images/selectedWork/project-1-img-1.png" alt="Platform Libraries Architecture" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Body Container 2: Platform components -->
+    <div class="work-detail-container work-detail-container--body">
+      <div class="body-text-section">
+        <div class="body-text-block">
+            <h3>→ Platform libraries provide composite components</h3>
+          <p>Platform components are organism-level composite components, created by combining core components. They deliver reusable solutions and patterns for a consistent user experience across contexts.</p>
+        </div>
+        <div class="body-text-block">
+          <h4>Key rules: Never break the foundation chain</h4>
+          <p class="meta-text">Platform components must inherit styling, interactions, and tokens from core components, providing scalable complexity without breaking foundations.</p>
+        </div>
+      </div>
+      <div class="body-image-section">
+        <div class="image-slot">
+          <img src="../images/selectedWork/project-1-img-2.png" alt="Composite Components" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Body Container 3: How platform components contribute -->
+    <div class="work-detail-container work-detail-container--body">
+      <div class="body-text-section">
+        <div class="body-text-block">
+          <h3>How platform components contribute to products</h3>
+          <p>This example shows how platform components provide reusable patterns built on core components. This efficient support enables effective page migrations and solves legacy system gaps.</p>
+        </div>
+      </div>
+      <div class="body-image-section">
+        <div class="image-slot">
+          <img src="../images/selectedWork/project-1-img-3.png" alt="Platform Components in Products" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Body Container 4: Strategy -->
+    <div class="work-detail-container work-detail-container--body">
+      <div class="body-text-section">
+        <div class="body-text-block">
+          <h3>Strategy of the platform components</h3>
+            <h3>→ Use of slots</h3>
+          <p>Platform extends with context: the platform component leverages the core tile to insert customized designs, creating specific platform tile components. In this way, the platform component maintains the tile's interaction states, styling, and foundations for both design and code sides.</p>
+        </div>
+      </div>
+      <div class="body-image-section">
+        <div class="image-slot">
+          <img src="../images/selectedWork/project-1-img-4.png" alt="Component Slots" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Body Container 5: Pattern consistency -->
+    <div class="work-detail-container work-detail-container--body">
+      <div class="body-text-section">
+        <div class="body-text-block">
+            <h3>→ Provide pattern consistency</h3>
+          <p>Platform components deliver preset layout patterns backed by foundation tokens, ensuring interactions remain aligned with core standards. Frequently used platform components can transition into the core library, strengthening shared patterns and enhancing design efficiency.</p>
+        </div>
+      </div>
+      <div class="body-image-section">
+        <div class="image-slot">
+          <img src="../images/selectedWork/project-1-img-5.png" alt="Pattern Consistency" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Body Container 6: Component tier evaluation -->
+    <div class="work-detail-container work-detail-container--body">
+      <div class="body-text-section">
+        <div class="body-text-block">
+          <h3>How to evaluate component's tier</h3>
+          <p>To streamline component creation and management, work with both the core and platform libraries to define clear evaluation criteria. Using a checklist approach, a requested component is assigned to the appropriate tier when it meets the required checkpoints for that category.</p>
+        </div>
+      </div>
+      <div class="body-image-section">
+        <div class="image-slot">
+          <img src="../images/selectedWork/project-1-img-6.png" alt="Component Tier Evaluation" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Full Width Image Container -->
+    <div class="work-detail-container">
+      <img src="../images/selectedWork/project-1-img-7.png" alt="Full width visual" style="width: 100%; height: auto; display: block; border-radius: 4px;" />
+    </div>
+
+       <!-- Body Container 7: Collaboration working model -->
+       <div class="work-detail-container work-detail-container--body">
+        <div class="body-text-section">
+          <div class="body-text-block">
+            <h3>Collaboration working model</h3>
+            <p>The collaboration model shows how the product design and design system teams work in tandem from kick-off to release. Product designers identify needs and request components, while the design system team evaluates these requests, understands product scenarios, and defines the supporting patterns. The two teams align at key checkpoints, such as reviews and adoption testing. After finalizing documentation and supporting engineering implementation through design QA, the design system team hands off the implemented components to product engineers. As the product design team proceeds with product design QA, the design system team refines documentation and publishes updates to the Figma library. </p>
+          </div>
+        </div>
+      </div>
+
+    <!-- Final Introduction Container: Business Impact & Learning -->
+    <div class="work-detail-container work-detail-container--introduction">
+      <div class="introduction-header">
+        <div class="introduction-column">
+          <h3>Business impact</h3>
+          <ol>
+            <li>Developed 30 TikTok Ad manager platform components, and Achieved 27K Figma insertions, demonstrating strong adoption and measurable improvement in design quality in 2025.</li>
+            <li>Consolidated 6 redundant local video tile designs into a single unified video tile, achieving an 83% reduction in duplicated design work. Leveraged a single core asset tile with custom slot variants to support 20 video-tile variants, eliminating the need to create 20 separate components. This approach drove a 95% reduction in variant duplication, strengthening design consistency, reducing waste, and significantly improving reusability across teams.</li>
+          </ol>
+        </div>
+        <div class="introduction-column">
+          <h3>Learning</h3>
+          <ol>
+            <li>Handling complex components by structuring configurable properties for both main and nested components.</li>
+            <li>Improving alignment and support between product launch timelines and platform component release schedules.</li>
+            <li>Further thoughts on efficient solutions and defining what an ideal automated code migration for platform libraries should achieve.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <!-- Next Project Container -->
+    <div class="work-detail-container work-detail-container--next">
+      <a href="selectedWork2.html" class="next-link">
+        <div class="next-title">Next: Keystone Platform Component</div>
+        <img src="../images/assets/arrow-right.svg" alt="Arrow Right" />
+      </a>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-bottom">
+      <a href="../index.html" class="logo">
+        <img src="../images/assets/logo-general-dark-desktop.svg" alt="Yunji Jun">
+      </a>
+      <p class="footer-copyright">
+        © 2025 Yunji Jun. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Link JS files -->
+  <script src="../js/navigation.js"></script>
+
+</body>
+</html>
+
