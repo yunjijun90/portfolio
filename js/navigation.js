@@ -66,23 +66,23 @@ function rotateOnHomepageVisit() {
 }
 
 // Setup logo click rotation (manual color rotation only)
-function setupLogoRotation() {
-  const navLogo = document.getElementById('navLogo');
-  const footerLogo = document.getElementById('footerLogo');
+//function setupLogoRotation() {
+//  const navLogo = document.getElementById('navLogo');
+//  const footerLogo = document.getElementById('footerLogo');
   
-  [navLogo, footerLogo].forEach(logo => {
-    if (logo) {
-      logo.addEventListener('click', function(e) {
-        // Rotate color only
-        const nextColorIndex = getNextColorIndex();
-        localStorage.setItem(COLOR_STORAGE_KEY, nextColorIndex);
-        
-        // Update immediately
-        initializeBackgroundColor();
-      });
-    }
-  });
-}
+//  [navLogo, footerLogo].forEach(logo => {
+//    if (logo) {
+//      logo.addEventListener('click', function(e) {
+//        // Rotate color only
+//        const nextColorIndex = getNextColorIndex();
+//        localStorage.setItem(COLOR_STORAGE_KEY, nextColorIndex);
+//        
+//        // Update immediately
+//        initializeBackgroundColor();
+//      });
+//    }
+//  });
+//}
 
 // Handle window resize
 window.addEventListener('resize', initializeLogos);
