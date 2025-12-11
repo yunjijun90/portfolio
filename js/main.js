@@ -9,7 +9,11 @@ let contentData = null;
 // Load content.json
 async function loadContent() {
   try {
-    const response = await fetch('data/content.json');
+    // Determine if we're in a subfolder or root
+    const path = window.location.pathname.includes('/pages/') 
+      ? '../data/content.json' 
+      : 'data/content.json';
+    const response = await fetch(path);
     contentData = await response.json();
     return contentData;
   } catch (error) {
@@ -126,8 +130,19 @@ async function handlePasswordSubmit(event) {
     sessionStorage.setItem('authenticated', 'true');
     sessionStorage.setItem('authTime', Date.now());
     
-    // Redirect to work detail page
-    window.location.href = `workDetail.html?project=${projectId}`;
+    // Find the project to get its detail page
+    const project = content.selectedWork.projects.find(p => p.id === projectId);
+    console.log('Found project:', project);
+    console.log('Detail page:', project?.detailPage);
+    
+    // Redirect to the project's specific detail page or default workDetail page
+    if (project && project.detailPage) {
+      console.log('Redirecting to:', project.detailPage);
+      window.location.href = project.detailPage;
+    } else {
+      console.log('Redirecting to default:', `workDetail.html?project=${projectId}`);
+      window.location.href = `workDetail.html?project=${projectId}`;
+    }
   } else {
     // Show error
     if (errorMessage) {

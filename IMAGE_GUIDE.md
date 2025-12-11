@@ -145,7 +145,7 @@ After adding images, update `data/content.json`:
     "projects": [
       {
         "id": "project-1",
-        "thumbnail": "images/selectedWork/project-1-thumbnail.jpg",
+        "thumbnail": "images/selectedWork/project-1-thumbnail.png",
         "thumbnailAlt": "Description of project 1 thumbnail"
       }
     ]
@@ -218,4 +218,5 @@ Images automatically adapt to different screen sizes:
 ---
 
 Need help? Check the main README.md for troubleshooting tips.
+
 

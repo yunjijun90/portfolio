@@ -48,6 +48,60 @@ img {
 }
 
 /* ========================================
+   LIST STYLING - Bullet Points & Numbering
+   ======================================== */
+
+/* Unordered lists (bullet points) */
+ul {
+  list-style-position: outside;
+  padding-left: var(--spacing-24);
+  margin: var(--spacing-16) 0;
+}
+
+ul li {
+  margin-bottom: var(--spacing-12); /* 12px spacing between bullets */
+}
+
+ul li:last-child {
+  margin-bottom: 0;
+}
+
+/* Ordered lists (numbering) */
+ol {
+  list-style-position: outside;
+  padding-left: var(--spacing-24);
+  margin: var(--spacing-16) 0;
+}
+
+ol li {
+  margin-bottom: var(--spacing-12); /* 12px spacing between numbers */
+}
+
+ol li:last-child {
+  margin-bottom: 0;
+}
+
+/* Nested lists - reduce spacing */
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+  margin: var(--spacing-8) 0;
+}
+
+ul ul li,
+ol ol li,
+ul ol li,
+ol ul li {
+  margin-bottom: var(--spacing-8);
+}
+
+p + ul,
+p + ol {
+  margin-top: var(--spacing-4); /* Even tighter: 4px */
+}
+
+/* ========================================
    NAVIGATION
    ======================================== */
 
@@ -55,10 +109,12 @@ img {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: var(--color-dynamic-pink);
+  background-color: var(--color-dynamic-blue);
   padding: var(--spacing-10) var(--spacing-40);
   transition: background-color 0.3s ease;
+  border-bottom: 1px solid var(--color-on-fill-black);
 }
+
 
 /* Logo Component */
 .logo {
@@ -83,6 +139,7 @@ img {
 
 .main-content {
   flex: 1;
+  background-color: var(--color-background-main);
 }
 
 /* ========================================
@@ -372,13 +429,15 @@ img {
   background-color: var(--color-background-main);
   padding: var(--spacing-24) var(--spacing-40);
   width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 /* Header Variant - Title and Subtitle */
 .work-detail-container--header {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-16);
+  gap: var(--spacing-4);
 }
 
 .work-detail-container--header .detail-title {
@@ -405,28 +464,34 @@ img {
 /* Introduction Variant - Multi-column layout */
 .work-detail-container--introduction {
   display: flex;
-  gap: var(--spacing-16);
+  flex-direction: column;
+  gap: var(--spacing-24);
+  padding-bottom: 32px;
+  padding-top: var(--spacing-24);
+}
+
+.introduction-header {
+  display: flex;
+  gap: var(--spacing-32);
 }
 
 .introduction-column {
-  flex: 1;
+  flex: 0 1 auto; /* Hug content, not fill */
   display: flex;
   flex-direction: column;
   gap: var(--spacing-8);
+  width: 389px; /* Fixed width from Figma */
 }
 
 .introduction-column--narrow {
-  flex: 0 0 290px;
-}
-
-.introduction-column--narrowest {
-  flex: 0 0 119px;
+  flex: 0 0 254px;
+  width: 254px;
 }
 
 .introduction-column h3 {
   font-family: var(--font-body);
   font-size: var(--font-size-t2);
-  font-weight: var(--font-weight-t2);
+  font-weight: 700; /* Bold */
   line-height: var(--line-height-t2);
   letter-spacing: var(--letter-spacing-t2);
   color: var(--color-on-fill-white);
@@ -436,9 +501,9 @@ img {
 .introduction-column h4 {
   font-family: var(--font-body);
   font-size: var(--font-size-t3);
-  font-weight: var(--font-weight-t3);
+  font-weight: 700; /* Bold */
   line-height: var(--line-height-t3);
-  color: var(--color-on-fill-white);
+  color: var(--color-on-fill-neutral);
   margin: 0;
 }
 
@@ -451,7 +516,10 @@ img {
   margin: 0;
 }
 
-.introduction-column .meta-text {
+.introduction-column .meta-text,
+.introduction-column ul,
+.introduction-column ol {
+  font-family: var(--font-body);
   font-size: var(--font-size-s1);
   font-weight: var(--font-weight-s1);
   line-height: var(--line-height-s1);
@@ -462,7 +530,7 @@ img {
 /* Body Variant - Text + Image */
 .work-detail-container--body {
   display: flex;
-  gap: var(--spacing-16);
+  gap: var(--spacing-32);
 }
 
 .body-text-section {
@@ -481,7 +549,7 @@ img {
 .body-text-block h3 {
   font-family: var(--font-body);
   font-size: var(--font-size-t2);
-  font-weight: var(--font-weight-t2);
+  font-weight: 700; /* Bold */
   line-height: var(--line-height-t2);
   letter-spacing: var(--letter-spacing-t2);
   color: var(--color-on-fill-white);
@@ -491,9 +559,9 @@ img {
 .body-text-block h4 {
   font-family: var(--font-body);
   font-size: var(--font-size-t3);
-  font-weight: var(--font-weight-t3);
+  font-weight: 700; /* Bold */
   line-height: var(--line-height-t3);
-  color: var(--color-on-fill-white);
+  color: var(--color-on-fill-neutral);
   margin: 0;
 }
 
@@ -506,7 +574,10 @@ img {
   margin: 0;
 }
 
-.body-text-block .meta-text {
+.body-text-block .meta-text,
+.body-text-block ul.meta-text,
+.body-text-block ul.meta-text li {
+  font-family: var(--font-body);
   font-size: var(--font-size-s1);
   font-weight: var(--font-weight-s1);
   line-height: var(--line-height-s1);
@@ -518,14 +589,29 @@ img {
   flex: 1;
 }
 
-/* Images Variant - Three column grid */
+.body-image-section img {
+  border-radius: 4px;
+}
+
+/* Images Variant - Four column grid for desktop (1440px) */
 .work-detail-container--images {
   display: flex;
   gap: var(--spacing-16);
+  flex-wrap: wrap;
+}
+
+/* For 1440px - 4 columns */
+.work-detail-container--images.size-1440 .image-slot {
+  flex: 0 0 calc((100% - (var(--spacing-16) * 3)) / 4);
+}
+
+/* For smaller sizes - 3 columns */
+.work-detail-container--images.size-1280 .image-slot,
+.work-detail-container--images.size-800 .image-slot {
+  flex: 0 0 calc((100% - (var(--spacing-16) * 2)) / 3);
 }
 
 .image-slot {
-  flex: 1;
   display: flex;
   flex-direction: column;
   gap: var(--spacing-4);
@@ -536,6 +622,7 @@ img {
   height: auto;
   display: block;
   background-color: var(--color-on-fill-neutral-low);
+  border-radius: 4px;
 }
 
 .image-slot .image-caption {
@@ -553,8 +640,7 @@ img {
   justify-content: flex-end;
   align-items: center;
   gap: var(--spacing-16);
-  padding-top: var(--spacing-24);
-  padding-bottom: var(--spacing-40);
+  padding: var(--spacing-40);
 }
 
 .next-link {
@@ -567,7 +653,7 @@ img {
 }
 
 .next-link:hover {
-  opacity: 0.7;
+  color: var(--color-dynamic-blue);
 }
 
 .next-link .next-title {

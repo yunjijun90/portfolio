@@ -5,7 +5,7 @@
 /* STK Earl - Purchased Web Font */
 @font-face {
   font-family: 'STK Earl';
-  src: url('../fonts/headline/STKEarl-Light.woff') format('woff');
+  src: url('../fonts/headline/STKEarl-Light.woff2') format('woff2');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -118,9 +118,9 @@
     
     /* Body Style - Inter */
     --font-size-b1: 14px;
-    --font-weight-b1: 400;  /* Regular */
+    --font-weight-b1: 300;  /* Regular */
     --line-height-b1: 145%;
-    --letter-spacing-b1: 0%;
+    --letter-spacing-b1: 0.15px;
     
     /* ========================================
        LAYOUT GRID SYSTEM

@@ -10,35 +10,36 @@
     "projects": [
       {
         "id": "project-1",
-        "title": "Project Title 1",
-        "subtitle": "Subtitle / Category",
-        "year": "2024",
+        "title": "Keystone Platform Libraries",
+        "subtitle": "Composite Library",
+        "year": "Design System",
         "thumbnail": "images/selectedWork/project-1-thumbnail.jpg",
         "thumbnails": [
-          "images/selectedWork/project-1-thumb-1.jpg",
-          "images/selectedWork/project-1-thumb-2.jpg"
+          "images/selectedWork/project-1-thumbnail1.png",
+          "images/selectedWork/project-1-thumbnail2.png"
         ],
-        "thumbnailAlt": "Project 1 thumbnail",
-        "detailPage": "pages/workDetail.html?project=project-1"
+        "thumbnailAlt": "Keystone Platform Libraries",
+        "detailPage": "selectedWork1.html"
       },
       {
         "id": "project-2",
-        "title": "Project Title 2",
-        "subtitle": "Subtitle / Category",
-        "year": "2024",
+        "title": "Keystone Platform Component",
+        "subtitle": "Platform Library",
+        "year": "Design System",
         "thumbnail": "images/selectedWork/project-2-thumbnail.jpg",
         "thumbnailAlt": "Project 2 thumbnail",
         "detailPage": "pages/workDetail.html?project=project-2"
       },
       {
         "id": "project-3",
-        "title": "Project Title 3",
-        "subtitle": "Subtitle / Category",
-        "year": "2023",
+        "title": "Chart Complexity",
+        "subtitle": "Core Library",
+        "year": "Design System",
         "thumbnail": "images/selectedWork/project-3-thumbnail.jpg",
         "thumbnailAlt": "Project 3 thumbnail",
         "detailPage": "pages/workDetail.html?project=project-3"
       }
+
     ]
   },
   "personalWork": {
@@ -47,18 +48,18 @@
     "projects": [
       {
         "id": "personal-1",
-        "title": "Personal Project Title 1",
-        "subtitle": "Category / Type",
-        "year": "2024",
+        "title": "Whimsical Cuteness",
+        "subtitle": "Typeface Design",
+        "year": "Typespecimen Book",
         "thumbnail": "images/personalWork/personal-1-thumbnail.jpg",
         "thumbnailAlt": "Personal project 1 thumbnail",
-        "detailPage": "pages/workDetail.html?project=personal-1"
+        "detailPage": "pages/personalWork1.html"
       },
       {
         "id": "personal-2",
-        "title": "Personal Project Title 2",
-        "subtitle": "Category / Type",
-        "year": "2024",
+        "title": "L.A. Texture",
+        "subtitle": "Photography",
+        "year": "Photography Book",
         "thumbnail": "images/personalWork/personal-2-thumbnail.jpg",
         "thumbnailAlt": "Personal project 2 thumbnail",
         "detailPage": "pages/workDetail.html?project=personal-2"
